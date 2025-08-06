@@ -1,0 +1,18 @@
+/* Custom styles */
+body {
+  font-family: "Inter", sans-serif;
+}
+/* Hide all pages by default */
+.page-content {
+  display: none;
+}
+/* Show the active page */
+.page-content.active {
+  display: block;
+}
+/* Active nav link style */
+.nav-link.active {
+  background-color: #16a34a; /* green-600 */
+  color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}

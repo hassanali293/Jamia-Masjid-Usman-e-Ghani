@@ -2,551 +2,515 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jamia Masjid Usman-e-Ghani - Namaz Timing</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Inter", sans-serif;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamia Masjid Usman-e-Ghani - Namaz Timing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
 
-    .nav-link.active {
-      background-color: #c2c7c2;
-      color: #065f46;
-      font-weight: 600;
-    }
+    .nav-link.active {
+      background-color: #c2c7c2;
+      color: #065f46;
+      font-weight: 600;
+    }
 
-    .current-prayer-highlight {
-      background-color: #ffd700 !important;
-      border-left: 4px solid #059669;
-      font-weight: bold;
-    }
+    .current-prayer-highlight {
+      background-color: #ffd700 !important;
+      border-left: 4px solid #059669;
+      font-weight: bold;
+    }
 
-    .next-prayer-highlight {
-      background-color: #e6fffa;
-    }
-  </style>
+    .next-prayer-highlight {
+      background-color: #e6fffa;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50">
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <div class="text-xl font-bold text-green-700">
-          Jamia Masjid Usman-e-Ghani
-        </div>
-        <div class="hidden md:flex items-center space-x-2">
-          <a href="index.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
-          <a href="namaz-timing.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
-            Timing</a>
-          <a href="members.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
-          <a href="about.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
-          <a href="contact.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
-            Us</a>
-        </div>
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <a href="index.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
-        <a href="namaz-timing.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
-          Timing</a>
-        <a href="members.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
-        <a href="about.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
-        <a href="contact.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
-          Us</a>
-      </div>
-    </nav>
-  </header>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-xl font-bold text-green-700">
+          Jamia Masjid Usman-e-Ghani
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+          <a href="index.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+          <a href="namaz-timing.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
+            Timing</a>
+          <a href="members.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+          <a href="about.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <a href="contact.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
+            Us</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+        <a href="namaz-timing.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
+          Timing</a>
+        <a href="members.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+        <a href="about.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+        <a href="contact.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
+          Us</a>
+      </div>
+    </nav>
+  </header>
 
-  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="text-center mb-8 p-6 bg-white rounded-xl shadow-lg max-w-2xl mx-auto">
-      <h2 class="text-4xl font-bold text-gray-800" id="current-time">
-        --:--:-- --
-      </h2>
-      <div id="next-prayer-info" class="mt-4">
-        <p class="text-lg font-semibold text-green-800">
-          Loading next prayer...
-        </p>
-        <p id="countdown-timer" class="text-2xl font-bold text-gray-700"></p>
-      </div>
-      <div id="morning-dua"
-        class="hidden mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-md">
-        <p class="font-bold">Sunrise Dua:</p>
-        <p class="italic">
-          "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur"
-        </p>
-      </div>
-    </div>
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="text-center mb-8 p-6 bg-white rounded-xl shadow-lg max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800" id="current-time">
+        --:--:-- --
+      </h2>
+      <div id="next-prayer-info" class="mt-4">
+        <p class="text-lg font-semibold text-green-800">
+          Loading next prayer...
+        </p>
+        <p id="countdown-timer" class="text-2xl font-bold text-gray-700"></p>
+      </div>
+      <div id="morning-dua"
+        class="hidden mt-4 p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-md">
+        <p class="font-bold">Sunrise Dua:</p>
+        <p class="italic">
+          "Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur"
+        </p>
+      </div>
+    </div>
 
-    <div class="space-y-8">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold text-green-800">Namaz Timings</h1>
-        <p id="namaz-date" class="text-gray-600 mt-2">Loading date...</p>
-      </div>
-      <div id="namaz-loader" class="flex justify-center items-center h-full">
-        <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600"></div>
-      </div>
-      <p id="namaz-error" class="hidden text-center text-red-500 bg-red-100 p-4 rounded-lg"></p>
-      <div id="namaz-card" class="hidden bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8 max-w-2xl mx-auto">
-        <div id="namaz-timings-container" class="space-y-4"></div>
-        <div class="mt-6 text-center text-sm text-gray-500">
-          <p>Calculation Method: University of Islamic Sciences, Karachi</p>
-          <p>Fiqh: Hanafi</p>
-          <p>Coordinates: 24.8667° N, 67.05° E</p>
-        </div>
-      </div>
+    <div class="space-y-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-green-800">Namaz Timings</h1>
+        <p id="namaz-date" class="text-gray-600 mt-2">Loading date...</p>
+      </div>
+      <div id="namaz-loader" class="flex justify-center items-center h-full">
+        <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600"></div>
+      </div>
+      <p id="namaz-error" class="hidden text-center text-red-500 bg-red-100 p-4 rounded-lg"></p>
+      <div id="namaz-card" class="hidden bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8 max-w-2xl mx-auto">
+        <div id="namaz-timings-container" class="space-y-4"></div>
+        <div class="mt-6 text-center text-sm text-gray-500">
+          <p>Calculation Method: University of Islamic Sciences, Karachi</p>
+          <p>Fiqh: Hanafi</p>
+          <p>Coordinates: 24.8667° N, 67.05° E</p>
+        </div>
+      </div>
 
-      <div class="mt-12 max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-green-800 text-center mb-6">
-          Annual Fixed Jamaat Timetable
-        </h2>
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-600">
-              <thead class="text-xs text-green-800 uppercase bg-green-100">
-                <tr>
-                  <th scope="col" class="px-6 py-3">Month</th>
-                  <th scope="col" class="px-6 py-3 text-center">Fajr</th>
-                  <th scope="col" class="px-6 py-3 text-center">Asr</th>
-                  <th scope="col" class="px-6 py-3 text-center">Isha</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    January
-                  </th>
-                  <td class="px-6 py-4 text-center">6:30 AM</td>
-                  <td class="px-6 py-4 text-center">4:45 PM</td>
-                  <td class="px-6 py-4 text-center">8:00 PM</td>
-                </tr>
-                <tr class="bg-green-50 border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    February
-                  </th>
-                  <td class="px-6 py-4 text-center">6:15 AM</td>
-                  <td class="px-6 py-4 text-center">5:00 PM</td>
-                  <td class="px-6 py-4 text-center">8:00 PM</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    March
-                  </th>
-                  <td class="px-6 py-4 text-center">6:00 AM</td>
-                  <td class="px-6 py-4 text-center">5:15 PM</td>
-                  <td class="px-6 py-4 text-center">8:15 PM</td>
-                </tr>
-                <tr class="bg-green-50 border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    April
-                  </th>
-                  <td class="px-6 py-4 text-center">5:45 AM</td>
-                  <td class="px-6 py-4 text-center">5:30 PM</td>
-                  <td class="px-6 py-4 text-center">8:30 PM</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    May
-                  </th>
-                  <td class="px-6 py-4 text-center">5:30 AM</td>
-                  <td class="px-6 py-4 text-center">5:45 PM</td>
-                  <td class="px-6 py-4 text-center">8:45 PM</td>
-                </tr>
-                <tr class="bg-green-50 border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    June
-                  </th>
-                  <td class="px-6 py-4 text-center">5:30 AM</td>
-                  <td class="px-6 py-4 text-center">5:45 PM</td>
-                  <td class="px-6 py-4 text-center">9:00 PM</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    July
-                  </th>
-                  <td class="px-6 py-4 text-center">5:30 AM</td>
-                  <td class="px-6 py-4 text-center">5:45 PM</td>
-                  <td class="px-6 py-4 text-center">9:00 PM</td>
-                </tr>
-                <tr class="bg-green-50 border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    August
-                  </th>
-                  <td class="px-6 py-4 text-center">5:45 AM</td>
-                  <td class="px-6 py-4 text-center">5:15 PM</td>
-                  <td class="px-6 py-4 text-center">8:45 PM</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    September
-                  </th>
-                  <td class="px-6 py-4 text-center">6:00 AM</td>
-                  <td class="px-6 py-4 text-center">5:00 PM</td>
-                  <td class="px-6 py-4 text-center">8:15 PM</td>
-                </tr>
-                <tr class="bg-green-50 border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    October
-                  </th>
-                  <td class="px-6 py-4 text-center">6:15 AM</td>
-                  <td class="px-6 py-4 text-center">4:45 PM</td>
-                  <td class="px-6 py-4 text-center">8:00 PM</td>
-                </tr>
-                <tr class="bg-white border-b">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    November
-                  </th>
-                  <td class="px-6 py-4 text-center">6:30 AM</td>
-                  <td class="px-6 py-4 text-center">4:30 PM</td>
-                  <td class="px-6 py-4 text-center">7:45 PM</td>
-                </tr>
-                <tr class="bg-green-50">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    December
-                  </th>
-                  <td class="px-6 py-4 text-center">6:45 AM</td>
-                  <td class="px-6 py-4 text-center">4:30 PM</td>
-                  <td class="px-6 py-4 text-center">7:45 PM</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="p-4 text-center text-sm text-gray-500 bg-gray-50">
-            <p><strong>Note:</strong> Dhuhr (1:30 PM), Jummah (1:50 PM), and Maghrib (5 mins after Adhan) times are
-              fixed year-round. This table shows monthly changes for other prayers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+            <div class="mt-12 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-800 text-center mb-6">
+          Fixed Jamaat Timetable
+        </h2>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-600">
+              <thead class="text-xs text-green-800 uppercase bg-green-100">
+                <tr>
+                  <th scope="col" class="px-6 py-3">Month</th>
+                  <th scope="col" class="px-6 py-3 text-center">Fajr</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    January
+                  </th>
+                  <td class="px-6 py-4 text-center">6:30 AM</td>
+                </tr>
+                <tr class="bg-green-50 border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    February
+                  </th>
+                  <td class="px-6 py-4 text-center">6:15 AM</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    March
+                  </th>
+                  <td class="px-6 py-4 text-center">6:00 AM</td>
+                </tr>
+                <tr class="bg-green-50 border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    April
+                  </th>
+                  <td class="px-6 py-4 text-center">5:45 AM</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    May
+                  </th>
+                  <td class="px-6 py-4 text-center">5:30 AM</td>
+                </tr>
+                <tr class="bg-green-50 border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    June
+                  </th>
+                  <td class="px-6 py-4 text-center">5:30 AM</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    July
+                  </th>
+                  <td class="px-6 py-4 text-center">5:30 AM</td>
+                </tr>
+                <tr class="bg-green-50 border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    August
+                  </th>
+                  <td class="px-6 py-4 text-center">5:45 AM</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    September
+                  </th>
+                  <td class="px-6 py-4 text-center">6:00 AM</td>
+                </tr>
+                <tr class="bg-green-50 border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    October
+                  </th>
+                  <td class="px-6 py-4 text-center">6:15 AM</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    November
+                  </th>
+                  <td class="px-6 py-4 text-center">6:30 AM</td>
+                </tr>
+                <tr class="bg-green-50">
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    December
+                  </th>
+                  <td class="px-6 py-4 text-center">6:45 AM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="p-4 text-center text-sm text-gray-500 bg-gray-50">
+            <p>
+              <strong>Note:</strong> Dhuhr (1:30 PM), Jummah (1:50 PM), and
+              Maghrib (5 mins after Adhan) jamaat times are fixed.
+              <b>Asr and Isha jamaat times are now automatically set to 15 minutes after the daily Adhan.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  <div id="audio-permission-banner"
-    class="fixed bottom-0 left-0 right-0 bg-blue-100 border-t border-blue-200 p-3 text-center text-blue-800 z-50 flex justify-between items-center">
-    <span>Click anywhere on the page to enable Azan & Aqamat audio
-      notifications.</span>
-    <button id="close-banner-btn" class="text-blue-800 font-bold text-xl px-2">
-      &times;
-    </button>
-  </div>
+  <div id="audio-permission-banner"
+    class="fixed bottom-0 left-0 right-0 bg-blue-100 border-t border-blue-200 p-3 text-center text-blue-800 z-50 flex justify-between items-center">
+    <span>Click anywhere on the page to enable Azan & Aqamat audio
+      notifications.</span>
+    <button id="close-banner-btn" class="text-blue-800 font-bold text-xl px-2">
+      &times;
+    </button>
+  </div>
 
-  <footer class="bg-gray-800 text-white mt-12">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-      <p>
-        © <span id="year"></span> Jamia Masjid Usman-e-Ghani. All Rights
-        Reserved.
-      </p>
-      <p class="text-sm text-gray-400 mt-1">
-        ST-11, Sector 5-A/1, North Karachi, Karachi
-      </p>
-    </div>
-  </footer>
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+      <p>
+        © <span id="year"></span> Jamia Masjid Usman-e-Ghani. All Rights
+        Reserved.
+      </p>
+      <p class="text-sm text-gray-400 mt-1">
+        ST-11, Sector 5-A/1, North Karachi, Karachi
+      </p>
+    </div>
+  </footer>
 
-  <audio id="azan-audio" preload="auto" src="azan.aac"></audio>
-  <audio id="iqamah-audio" preload="auto" src="Iqamat.mp3"></audio>
+  <audio id="azan-audio" preload="auto" src="azan.aac"></audio>
+  <audio id="iqamah-audio" preload="auto" src="Iqamat.mp3"></audio>
 
-  <script>
-    let clockInterval = null;
-    let prayerTimesData = {};
-    let jamaatTimesData = {};
-    let playedStatus = {};
-    let jamaatPlayedStatus = {};
-    let allEvents = []; // Change: Will hold all events (Adhan, Jamaat) sorted by time
+  <script>
+    let clockInterval = null;
+    let prayerTimesData = {};
+    let jamaatTimesData = {};
+    let playedStatus = {};
+    let jamaatPlayedStatus = {};
+    let allEvents = [];
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
 
-      document.getElementById("year").textContent = new Date().getFullYear();
-      fetchNamazTimings();
+      document.getElementById("year").textContent = new Date().getFullYear();
+      fetchNamazTimings();
 
-      const audioBanner = document.getElementById("audio-permission-banner");
-      const closeBannerBtn = document.getElementById("close-banner-btn");
+      const audioBanner = document.getElementById("audio-permission-banner");
+      const closeBannerBtn = document.getElementById("close-banner-btn");
 
-      function enableAudio() {
-        const azanAudio = document.getElementById("azan-audio");
-        const iqamahAudio = document.getElementById("iqamah-audio");
+      function enableAudio() {
+        const azanAudio = document.getElementById("azan-audio");
+        const iqamahAudio = document.getElementById("iqamah-audio");
 
-        // Unlock Azan audio
-        azanAudio.muted = true;
-        azanAudio.play().catch(() => { });
-        azanAudio.pause();
-        azanAudio.currentTime = 0;
-        azanAudio.muted = false;
+        azanAudio.muted = true;
+        azanAudio.play().catch(() => { });
+        azanAudio.pause();
+        azanAudio.currentTime = 0;
+        azanAudio.muted = false;
 
-        // Change: Unlock Iqamah audio as well
-        iqamahAudio.muted = true;
-        iqamahAudio.play().catch(() => { });
-        iqamahAudio.pause();
-        iqamahAudio.currentTime = 0;
-        iqamahAudio.muted = false;
+        iqamahAudio.muted = true;
+        iqamahAudio.play().catch(() => { });
+        iqamahAudio.pause();
+        iqamahAudio.currentTime = 0;
+        iqamahAudio.muted = false;
 
-        audioBanner.style.display = "none";
-        document.body.removeEventListener("click", enableAudio);
-      }
+        audioBanner.style.display = "none";
+        document.body.removeEventListener("click", enableAudio);
+      }
 
-      document.body.addEventListener("click", enableAudio, { once: true });
-      closeBannerBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        audioBanner.style.display = "none";
-      });
-    });
+      document.body.addEventListener("click", enableAudio, { once: true });
+      closeBannerBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        audioBanner.style.display = "none";
+      });
+    });
 
-    // Change: Helper function to add minutes to a time string (HH:mm)
-    function addMinutes(timeStr, minsToAdd) {
-      const [hours, minutes] = timeStr.split(":").map(Number);
-      const date = new Date();
-      date.setHours(hours, minutes + minsToAdd, 0, 0);
-      const newHours = String(date.getHours()).padStart(2, "0");
-      const newMinutes = String(date.getMinutes()).padStart(2, "0");
-      return `${newHours}:${newMinutes}`;
-    }
+    function addMinutes(timeStr, minsToAdd) {
+      const [hours, minutes] = timeStr.split(":").map(Number);
+      const date = new Date();
+      date.setHours(hours, minutes + minsToAdd, 0, 0);
+      const newHours = String(date.getHours()).padStart(2, "0");
+      const newMinutes = String(date.getMinutes()).padStart(2, "0");
+      return `${newHours}:${newMinutes}`;
+    }
 
-    function timeToSeconds(time) {
-      if (!time) return 0;
-      const [hours, minutes] = time.split(":").map(Number);
-      return hours * 3600 + minutes * 60;
-    }
+    function timeToSeconds(time) {
+      if (!time) return 0;
+      const [hours, minutes] = time.split(":").map(Number);
+      return hours * 3600 + minutes * 60;
+    }
 
-    // Change: New function to prepare the sorted event list and start the clock
-    function setupEventsAndClock() {
-      allEvents = [];
-      const adhanPrayers = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+    function setupEventsAndClock() {
+      allEvents = [];
+      const adhanPrayers = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
-      // Add Adhan events
-      adhanPrayers.forEach(name => {
-        if (prayerTimesData[name]) {
-          allEvents.push({ name: name, time: prayerTimesData[name], type: 'Adhan' });
-        }
-      });
+      adhanPrayers.forEach(name => {
+        if (prayerTimesData[name]) {
+          allEvents.push({ name: name, time: prayerTimesData[name], type: 'Adhan' });
+        }
+      });
 
-      // Add Jamaat events
-      Object.keys(jamaatTimesData).forEach(name => {
-        if (jamaatTimesData[name]) {
-          const eventName = (name === 'Jummah') ? 'Jummah' : name;
-          allEvents.push({ name: eventName, time: jamaatTimesData[name], type: 'Jamaat' });
-        }
-      });
+      Object.keys(jamaatTimesData).forEach(name => {
+        if (jamaatTimesData[name]) {
+          const eventName = (name === 'Jummah') ? 'Jummah' : name;
+          allEvents.push({ name: eventName, time: jamaatTimesData[name], type: 'Jamaat' });
+        }
+      });
 
-      // Add Sunrise event (for dua display, no audio)
-      if (prayerTimesData.Sunrise) {
-        allEvents.push({ name: 'Sunrise', time: prayerTimesData.Sunrise, type: 'Sunrise' });
-      }
+      if (prayerTimesData.Sunrise) {
+        allEvents.push({ name: 'Sunrise', time: prayerTimesData.Sunrise, type: 'Sunrise' });
+      }
 
-      // Sort all events by time to find the correct next event
-      allEvents.sort((a, b) => timeToSeconds(a.time) - timeToSeconds(b.time));
+      allEvents.sort((a, b) => timeToSeconds(a.time) - timeToSeconds(b.time));
 
-      runClockAndChecks(); // Now start the main clock loop
-    }
+      runClockAndChecks();
+    }
 
-    function runClockAndChecks() {
-      if (clockInterval) clearInterval(clockInterval);
+    function runClockAndChecks() {
+      if (clockInterval) clearInterval(clockInterval);
 
-      clockInterval = setInterval(() => {
-        const now = new Date();
-        document.getElementById("current-time").textContent = now.toLocaleTimeString("en-US");
-        const nowInSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+      clockInterval = setInterval(() => {
+        const now = new Date();
+        document.getElementById("current-time").textContent = now.toLocaleTimeString("en-US");
+        const nowInSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 
-        // ---- Highlight Logic (based on prayer periods, not exact events) ----
-        const prayerOrderForHighlight = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
-        let nextPrayerNameForHighlight = "Fajr";
-        let foundNextHighlight = false;
-        let currentPrayerNameForHighlight = "";
+        const prayerOrderForHighlight = ["Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
+        let nextPrayerNameForHighlight = "Fajr";
+        let foundNextHighlight = false;
+        let currentPrayerNameForHighlight = "";
 
-        document.querySelectorAll("[id^=prayer-row-]").forEach(row => row.classList.remove("current-prayer-highlight", "next-prayer-highlight"));
+        document.querySelectorAll("[id^=prayer-row-]").forEach(row => row.classList.remove("current-prayer-highlight", "next-prayer-highlight"));
 
-        for (let i = 0; i < prayerOrderForHighlight.length; i++) {
-          const prayerName = prayerOrderForHighlight[i];
-          if (timeToSeconds(prayerTimesData[prayerName]) > nowInSeconds) {
-            nextPrayerNameForHighlight = prayerName;
-            foundNextHighlight = true;
-            if (i > 0) currentPrayerNameForHighlight = prayerOrderForHighlight[i - 1];
-            break;
-          }
-        }
-        if (!foundNextHighlight) currentPrayerNameForHighlight = "Isha";
+        for (let i = 0; i < prayerOrderForHighlight.length; i++) {
+          const prayerName = prayerOrderForHighlight[i];
+          if (timeToSeconds(prayerTimesData[prayerName]) > nowInSeconds) {
+            nextPrayerNameForHighlight = prayerName;
+            foundNextHighlight = true;
+            if (i > 0) currentPrayerNameForHighlight = prayerOrderForHighlight[i - 1];
+            break;
+          }
+        }
+        if (!foundNextHighlight) currentPrayerNameForHighlight = "Isha";
 
-        if (currentPrayerNameForHighlight) document.getElementById(`prayer-row-${currentPrayerNameForHighlight}`)?.classList.add("current-prayer-highlight");
-        if (foundNextHighlight) document.getElementById(`prayer-row-${nextPrayerNameForHighlight}`)?.classList.add("next-prayer-highlight");
+        if (currentPrayerNameForHighlight) document.getElementById(`prayer-row-${currentPrayerNameForHighlight}`)?.classList.add("current-prayer-highlight");
+        if (foundNextHighlight) document.getElementById(`prayer-row-${nextPrayerNameForHighlight}`)?.classList.add("next-prayer-highlight");
 
+        let nextEvent = null;
+        let foundNextEvent = false;
 
-        // ---- Countdown & Audio Logic (based on the sorted allEvents list) ----
-        let nextEvent = null;
-        let foundNextEvent = false;
+        for (const event of allEvents) {
+          if (timeToSeconds(event.time) > nowInSeconds) {
+            nextEvent = event;
+            foundNextEvent = true;
+            break;
+          }
+        }
 
-        for (const event of allEvents) {
-          if (timeToSeconds(event.time) > nowInSeconds) {
-            nextEvent = event;
-            foundNextEvent = true;
-            break;
-          }
-        }
+        if (!foundNextEvent) nextEvent = allEvents[0];
 
-        if (!foundNextEvent) nextEvent = allEvents[0]; // After last event, next is Fajr tomorrow
+        let timeToNextEventInSeconds;
+        if (foundNextEvent) {
+          timeToNextEventInSeconds = timeToSeconds(nextEvent.time) - nowInSeconds;
+        } else {
+          timeToNextEventInSeconds = (24 * 3600) - nowInSeconds + timeToSeconds(nextEvent.time);
+        }
 
-        let timeToNextEventInSeconds;
-        if (foundNextEvent) {
-          timeToNextEventInSeconds = timeToSeconds(nextEvent.time) - nowInSeconds;
-        } else {
-          timeToNextEventInSeconds = (24 * 3600) - nowInSeconds + timeToSeconds(nextEvent.time);
-        }
+        const hours = Math.floor(timeToNextEventInSeconds / 3600);
+        const minutes = Math.floor((timeToNextEventInSeconds % 3600) / 60);
+        const seconds = timeToNextEventInSeconds % 60;
 
-        const hours = Math.floor(timeToNextEventInSeconds / 3600);
-        const minutes = Math.floor((timeToNextEventInSeconds % 3600) / 60);
-        const seconds = timeToNextEventInSeconds % 60;
+        const eventDisplayName = nextEvent.type === 'Jamaat' ? `${nextEvent.name} Jamaat` : `${nextEvent.name}`;
+        document.querySelector("#next-prayer-info p:first-child").textContent = `Time until ${eventDisplayName}:`;
+        document.getElementById("countdown-timer").textContent = `${String(hours).padStart(2, "0")}h ${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
 
-        const eventDisplayName = nextEvent.type === 'Jamaat' ? `${nextEvent.name} Jamaat` : `${nextEvent.name}`;
-        document.querySelector("#next-prayer-info p:first-child").textContent = `Time until ${eventDisplayName}:`;
-        document.getElementById("countdown-timer").textContent = `${String(hours).padStart(2, "0")}h ${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(2, "0")}s`;
+        if (timeToNextEventInSeconds <= 1) {
+          if (nextEvent.type === 'Adhan' && !playedStatus[nextEvent.name]) {
+            console.log(`Time for ${nextEvent.name} Adhan! Playing Azan.`);
+            document.getElementById("azan-audio").play().catch(e => console.error("Azan audio play failed:", e));
+            playedStatus[nextEvent.name] = true;
+          }
+          else if (nextEvent.type === 'Jamaat' && !jamaatPlayedStatus[nextEvent.name]) {
+            console.log(`Time for ${nextEvent.name} Jamaat! Playing Iqamah.`);
+            document.getElementById("iqamah-audio").play().catch(e => console.error("Iqamah audio play failed:", e));
+            jamaatPlayedStatus[nextEvent.name] = true;
 
-        // ---- Audio & Dua Trigger Logic ----
-        if (timeToNextEventInSeconds <= 1) {
-          if (nextEvent.type === 'Adhan' && !playedStatus[nextEvent.name]) {
-            console.log(`Time for ${nextEvent.name} Adhan! Playing Azan.`);
-            document.getElementById("azan-audio").play().catch(e => console.error("Azan audio play failed:", e));
-            playedStatus[nextEvent.name] = true;
-          }
-          else if (nextEvent.type === 'Jamaat' && !jamaatPlayedStatus[nextEvent.name]) {
-            console.log(`Time for ${nextEvent.name} Jamaat! Playing Iqamah.`);
-            document.getElementById("iqamah-audio").play().catch(e => console.error("Iqamah audio play failed:", e));
-            jamaatPlayedStatus[nextEvent.name] = true;
+            if (nextEvent.name === 'Isha') {
+              setTimeout(() => {
+                Object.keys(playedStatus).forEach(key => (playedStatus[key] = false));
+                Object.keys(jamaatPlayedStatus).forEach(key => (jamaatPlayedStatus[key] = false));
+                console.log("All prayer statuses reset for the next day.");
+              }, 5000);
+            }
+          }
+          else if (nextEvent.type === 'Sunrise' && !playedStatus[nextEvent.name]) {
+            console.log("Time for Sunrise Dua.");
+            document.getElementById("morning-dua").classList.remove("hidden");
+            setTimeout(() => document.getElementById("morning-dua").classList.add("hidden"), 5 * 60 * 1000);
+            playedStatus[nextEvent.name] = true;
+          }
+        }
+      }, 1000);
+    }
 
-            // Reset all statuses after Isha jamaat for the next day
-            if (nextEvent.name === 'Isha') {
-              setTimeout(() => {
-                Object.keys(playedStatus).forEach(key => (playedStatus[key] = false));
-                Object.keys(jamaatPlayedStatus).forEach(key => (jamaatPlayedStatus[key] = false));
-                console.log("All prayer statuses reset for the next day.");
-              }, 5000); // 5 second delay
-            }
-          }
-          else if (nextEvent.type === 'Sunrise' && !playedStatus[nextEvent.name]) {
-            console.log("Time for Sunrise Dua.");
-            document.getElementById("morning-dua").classList.remove("hidden");
-            setTimeout(() => document.getElementById("morning-dua").classList.add("hidden"), 5 * 60 * 1000);
-            playedStatus[nextEvent.name] = true;
-          }
-        }
-      }, 1000);
-    }
+    async function fetchNamazTimings() {
+      const loader = document.getElementById("namaz-loader");
+      const errorEl = document.getElementById("namaz-error");
+      const cardEl = document.getElementById("namaz-card");
+      const container = document.getElementById("namaz-timings-container");
+      const dateEl = document.getElementById("namaz-date");
 
-    async function fetchNamazTimings() {
-      const loader = document.getElementById("namaz-loader");
-      const errorEl = document.getElementById("namaz-error");
-      const cardEl = document.getElementById("namaz-card");
-      const container = document.getElementById("namaz-timings-container");
-      const dateEl = document.getElementById("namaz-date");
+      loader.style.display = "flex";
+      errorEl.classList.add("hidden");
+      cardEl.classList.add("hidden");
 
-      loader.style.display = "flex";
-      errorEl.classList.add("hidden");
-      cardEl.classList.add("hidden");
+      try {
+        const response = await fetch(
+          "https://api.aladhan.com/v1/timingsByCity?city=Karachi&country=Pakistan&method=1&school=1"
+        );
+        if (!response.ok)
+          throw new Error(`Network error: ${response.statusText}`);
 
-      try {
-        const response = await fetch(
-          "https://api.aladhan.com/v1/timingsByCity?city=Karachi&country=Pakistan&method=1&school=1"
-        );
-        if (!response.ok)
-          throw new Error(`Network error: ${response.statusText}`);
+        const data = await response.json();
+        const timings = data.data;
 
-        const data = await response.json();
-        const timings = data.data;
+        prayerTimesData = timings.timings;
 
-        prayerTimesData = timings.timings;
+        // === JAVASCRIPT CHANGES START HERE ===
+        // These lines now set Asr and Isha Jamaat to 15 minutes after Adhan
+        jamaatTimesData.Fajr = addMinutes(timings.timings.Fajr, 31);
+        jamaatTimesData.Dhuhr = "13:30";
+        jamaatTimesData.Asr = addMinutes(timings.timings.Asr, 15); // Changed from 29 to 15
+        jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
+        jamaatTimesData.Isha = addMinutes(timings.timings.Isha, 15); // Changed from 24 to 15
+        jamaatTimesData.Jummah = "13:50";
+        // === JAVASCRIPT CHANGES END HERE ===
 
-        // Change: Calculate Jamaat times based on your rules
-        jamaatTimesData.Fajr = addMinutes(timings.timings.Fajr, 31);
-        jamaatTimesData.Dhuhr = "13:30";
-        jamaatTimesData.Asr = addMinutes(timings.timings.Asr, 29);
-        jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
-        jamaatTimesData.Isha = addMinutes(timings.timings.Isha, 24);
-        jamaatTimesData.Jummah = "13:50"; // For Friday
+        Object.keys(prayerTimesData).forEach(key => (playedStatus[key] = false));
+        Object.keys(jamaatTimesData).forEach(key => (jamaatPlayedStatus[key] = false));
 
-        // Initialize played statuses
-        Object.keys(prayerTimesData).forEach(key => (playedStatus[key] = false));
-        Object.keys(jamaatTimesData).forEach(key => (jamaatPlayedStatus[key] = false));
+        const isFriday = new Date(timings.date.readable).getDay() === 5;
+        dateEl.textContent = `${timings.date.readable} (${timings.date.hijri.weekday.en}, ${timings.date.hijri.day} ${timings.date.hijri.month.en} ${timings.date.hijri.year})`;
+        container.innerHTML = "";
 
-        const isFriday = new Date(timings.date.readable).getDay() === 5;
-        dateEl.textContent = `${timings.date.readable} (${timings.date.hijri.weekday.en}, ${timings.date.hijri.day} ${timings.date.hijri.month.en} ${timings.date.hijri.year})`;
-        container.innerHTML = "";
+        const prayerDisplayOrder = [
+          { name: "Fajr", time: timings.timings.Fajr },
+          { name: "Sunrise", time: timings.timings.Sunrise },
+          { name: "Dhuhr", time: timings.timings.Dhuhr },
+          { name: "Asr", time: timings.timings.Asr },
+          { name: "Maghrib", time: timings.timings.Maghrib },
+          { name: "Isha", time: timings.timings.Isha },
+        ];
 
-        const prayerDisplayOrder = [
-          { name: "Fajr", time: timings.timings.Fajr },
-          { name: "Sunrise", time: timings.timings.Sunrise },
-          { name: "Dhuhr", time: timings.timings.Dhuhr },
-          { name: "Asr", time: timings.timings.Asr },
-          { name: "Maghrib", time: timings.timings.Maghrib },
-          { name: "Isha", time: timings.timings.Isha },
-        ];
+        prayerDisplayOrder.forEach((prayer, index) => {
+          const isJummahPrayer = isFriday && prayer.name === "Dhuhr";
+          const displayName = isJummahPrayer ? "Jummah" : prayer.name;
+          const jamaatTime = jamaatTimesData[displayName] || jamaatTimesData[prayer.name];
 
-        // Change: Modified loop to display Adhan and Jamaat times
-        prayerDisplayOrder.forEach((prayer, index) => {
-          const isJummahPrayer = isFriday && prayer.name === "Dhuhr";
-          const displayName = isJummahPrayer ? "Jummah" : prayer.name;
-          const jamaatTime = jamaatTimesData[displayName] || jamaatTimesData[prayer.name];
+          const row = document.createElement("div");
+          row.id = `prayer-row-${prayer.name}`;
 
-          const row = document.createElement("div");
-          row.id = `prayer-row-${prayer.name}`; // Use original name for highlight logic
+          let rowClasses = "flex justify-between items-center p-4 rounded-lg transition-colors duration-300";
+          if (isJummahPrayer) {
+            rowClasses += " bg-green-100 border-l-4 border-green-500";
+          } else {
+            rowClasses += index % 2 === 0 ? " bg-green-50" : " bg-white";
+          }
+          row.className = rowClasses;
 
-          let rowClasses = "flex justify-between items-center p-4 rounded-lg transition-colors duration-300";
-          if (isJummahPrayer) {
-            rowClasses += " bg-green-100 border-l-4 border-green-500";
-          } else {
-            rowClasses += index % 2 === 0 ? " bg-green-50" : " bg-white";
-          }
-          row.className = rowClasses;
+          let jamaatHtml = "";
+          if (jamaatTime && prayer.name !== 'Sunrise') {
+            const jamaatLabel = isJummahPrayer ? "Prayer" : "Jamaat";
+            jamaatHtml = `<span class="text-sm text-gray-500"> / ${jamaatLabel}: <b>${jamaatTime}</b></span>`;
+          }
 
-          let jamaatHtml = "";
-          if (jamaatTime && prayer.name !== 'Sunrise') {
-            const jamaatLabel = isJummahPrayer ? "Prayer" : "Jamaat";
-            jamaatHtml = `<span class="text-sm text-gray-500"> / ${jamaatLabel}: <b>${jamaatTime}</b></span>`;
-          }
+          const adhanLabel = prayer.name === 'Sunrise' ? 'Time' : 'Adhan';
+          row.innerHTML = `
+                <p class="text-lg font-semibold text-green-800">${displayName}</p>
+                <div class="text-right">
+                  <p class="text-xl font-bold text-gray-700">
+                    <span class="text-sm font-medium text-gray-500">${adhanLabel}: </span>${prayer.time}
+                  </p>
+                  ${jamaatTime && prayer.name !== 'Sunrise' ? `<p class="text-base font-bold text-green-700 mt-1">Jamaat: ${jamaatTime}</p>` : ''}
+                </div>`;
+          container.appendChild(row);
+        });
 
-          const adhanLabel = prayer.name === 'Sunrise' ? 'Time' : 'Adhan';
-          row.innerHTML = `
-                <p class="text-lg font-semibold text-green-800">${displayName}</p>
-                <div class="text-right">
-                  <p class="text-xl font-bold text-gray-700">
-                    <span class="text-sm font-medium text-gray-500">${adhanLabel}: </span>${prayer.time}
-                  </p>
-                  ${jamaatTime && prayer.name !== 'Sunrise' ? `<p class="text-base font-bold text-green-700 mt-1">Jamaat: ${jamaatTime}</p>` : ''}
-                </div>`;
-          container.appendChild(row);
-        });
+        cardEl.classList.remove("hidden");
+        setupEventsAndClock();
 
-        cardEl.classList.remove("hidden");
-        setupEventsAndClock(); // Call the new setup function
-
-      } catch (err) {
-        console.error("Error fetching prayer times:", err);
-        errorEl.textContent = "Failed to load prayer times. Check your internet connection.";
-        errorEl.classList.remove("hidden");
-      } finally {
-        loader.style.display = "none";
-      }
-    }
-  </script>
+      } catch (err) {
+        console.error("Error fetching prayer times:", err);
+        errorEl.textContent = "Failed to load prayer times. Check your internet connection.";
+        errorEl.classList.remove("hidden");
+      } finally {
+        loader.style.display = "none";
+      }
+    }
+  </script>
 </body>
 
 </html>

@@ -323,7 +323,7 @@
             <div class="p-4 text-center text-sm text-gray-500 bg-gray-50">
               <p>
                 <strong>Note:</strong> Dhuhr (1:30 PM), Jummah (1:50 PM), and
-                Maghrib (3 mins after Adhan) times are fixed year-round. This
+                Maghrib (5 mins after Adhan) times are fixed year-round. This
                 table shows monthly changes for other prayers.
               </p>
             </div>
@@ -360,8 +360,8 @@
       </div>
     </footer>
 
-    <audio id="azan-audio" preload="auto" src="a2.mp3"></audio>
-    <audio id="iqamah-audio" preload="auto" src="a2.mp3"></audio>
+    <audio id="azan-audio" preload="auto" src="azan.aac"></audio>
+    <audio id="iqamah-audio" preload="auto" src="Iqamat.mp3"></audio>
 
     <script>
       let clockInterval = null;
@@ -640,11 +640,11 @@
           prayerTimesData = timings.timings;
 
           // Change: Calculate Jamaat times based on your rules
-          jamaatTimesData.Fajr = addMinutes(timings.timings.Fajr, 31);
+          jamaatTimesData.Fajr = addMinutes(timings.timings.Fajr, 50);
           jamaatTimesData.Dhuhr = "13:30";
           jamaatTimesData.Asr = addMinutes(timings.timings.Asr, 28);
-          jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 3);
-          jamaatTimesData.Isha = addMinutes(timings.timings.Isha, 24);
+          jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
+          jamaatTimesData.Isha = addMinutes(timings.timings.Isha, 25);
           jamaatTimesData.Jummah = "13:50"; // For Friday
 
           // Initialize played statuses
@@ -730,4 +730,5 @@
 
 
 </html>
+
 

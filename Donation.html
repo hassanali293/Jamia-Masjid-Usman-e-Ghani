@@ -15,111 +15,56 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      /* Style for the active navigation link */
       .nav-link.active {
-        background-color: #c2c7c2;
-        color: #065f46;
+        background-color: #d1fae5; /* A light green background */
+        color: #065f46; /* A dark green text color */
         font-weight: 600;
       }
     </style>
   </head>
   <body class="bg-gray-50">
+    <!-- Header: Ensure this header is consistent across all pages -->
     <header class="bg-white shadow-md sticky top-0 z-50">
       <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <div class="text-xl font-bold text-green-700">
             Jamia Masjid Usman-e-Ghani
           </div>
+          <!-- Desktop Menu -->
           <div class="hidden md:flex items-center space-x-2">
-            <a
-              href="index.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Home</a
-            >
-            <a
-              href="namaz-timing.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Namaz Timing</a
-            >
-            <a
-              href="members.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Members</a
-            >
-            <a
-              href="about.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >About</a
-            >
-            <a
-              href="donation.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active"
-              >Donation</a
-            >
-            <a
-              href="contact.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Contact Us</a
-            >
+            <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+            <a href="namaz-timing.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz Timing</a>
+            <a href="members.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+            <a href="about.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+            <a href="donation.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">Donation</a>
+            <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact Us</a>
           </div>
+          <!-- Mobile Menu Button -->
           <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-700 hover:text-green-700 focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+            <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
               </svg>
             </button>
           </div>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a
-            href="index.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Home</a
-          >
-          <a
-            href="namaz-timing.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Namaz Timing</a
-          >
-          <a
-            href="members.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Members</a
-          >
-          <a
-            href="about.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >About</a
-          >
-          <a
-            href="donation.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active"
-            >Donation</a
-          >
-          <a
-            href="contact.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Contact Us</a
-          >
+          <a href="index.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+          <a href="namaz-timing.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz Timing</a>
+          <a href="members.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+          <a href="about.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <a href="donation.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Donation</a>
+          <a href="contact.html" class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact Us</a>
         </div>
       </nav>
     </header>
 
+    <!-- Main Content for Donation Page -->
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="text-center">
-        <h1 class="text-4xl font-bold text-green-800 mb-4">
+        <h1 class="text-4xl font-extrabold text-green-800 mb-4 tracking-tight">
           Support Your Masjid
         </h1>
         <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
@@ -130,35 +75,38 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h2 class="text-2xl font-semibold text-green-700 mb-4 border-b pb-2">
+      <!-- Donation Methods Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Bank Details Card -->
+        <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+          <h2 class="text-2xl font-semibold text-green-700 mb-4 border-b-2 border-green-200 pb-3">
             Bank Account Details
           </h2>
-          <div class="space-y-3 text-gray-800">
-            <div class="flex justify-between">
+          <div class="space-y-4 text-gray-800">
+            <div class="flex justify-between items-center">
               <span class="font-medium">Bank Name:</span>
-              <span>Meezan Bank Ltd.</span>
+              <span class="font-semibold">Meezan Bank Ltd.</span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center">
               <span class="font-medium">Account Title:</span>
-              <span>Jamia Masjid Usman-e-Ghani</span>
+              <span class="font-semibold">Jamia Masjid Usman-e-Ghani</span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center">
               <span class="font-medium">Account Number:</span>
-              <span>0123 4567 8901 2345</span>
+              <span class="font-semibold">0123 4567 8901 2345</span>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mt-2">
               <span class="font-medium">IBAN:</span>
-              <span class="text-sm text-gray-600 break-all"
+              <span class="text-sm text-gray-600 break-all font-mono"
                 >PK12 MEZN 0123 4567 8901 2345</span
               >
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h2 class="text-2xl font-semibold text-green-700 mb-4 border-b pb-2">
+        <!-- QR Code / Mobile Payment Card -->
+        <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
+          <h2 class="text-2xl font-semibold text-green-700 mb-4 border-b-2 border-green-200 pb-3">
             Online / Mobile Payment
           </h2>
           <p class="text-gray-600 mb-4">
@@ -166,43 +114,63 @@
             code below with your banking app.
           </p>
           <div class="flex justify-center">
+            <!-- Placeholder QR code. Replace the URL in `src` with your actual QR code image link -->
             <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=YourDonationLinkOrDetailsHere"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Your-Donation-Details-Here"
               alt="Donation QR Code"
-              class="rounded-md"
+              class="rounded-md border-4 border-gray-200"
+              onerror="this.onerror=null;this.src='https://placehold.co/180x180/e2e8f0/4a5568?text=QR+Code';"
             />
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <blockquote class="text-xl italic text-gray-700 border-l-4 border-green-600 pl-4 max-w-3xl mx-auto">
+      <!-- Quranic Verse and Closing Message -->
+      <div class="text-center mt-16">
+        <blockquote class="text-xl italic text-gray-700 border-l-4 border-green-600 pl-6 max-w-3xl mx-auto">
           "The example of those who spend their wealth in the way of Allah is
           like a seed [of grain] which grows seven spikes; in each spike is a
           hundred grains. And Allah multiplies [His reward] for whom He wills.
           And Allah is all-Encompassing and Knowing."
-          <cite class="block text-right not-italic text-base text-gray-500 mt-2"
+          <cite class="block text-right not-italic text-base text-gray-500 mt-3"
             >— The Holy Quran, 2:261</cite
           >
         </blockquote>
-        <p class="text-green-800 font-semibold mt-6">
+        <p class="text-green-800 font-bold text-lg mt-8">
           JazakAllah Khair for your support!
         </p>
       </div>
     </main>
 
-    <footer class="bg-white mt-12 border-t">
-        <div class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+    <!-- Footer -->
+    <footer class="bg-gray mt-12 border-t">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
             &copy; 2025 Jamia Masjid Usman-e-Ghani. All Rights Reserved.
         </div>
     </footer>
 
+    <!-- JavaScript for Mobile Menu -->
     <script>
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
 
       mobileMenuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+      });
+
+      // Simple script to set the active nav link based on the current page
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const currentPage = window.location.pathname.split('/').pop();
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
       });
     </script>
   </body>

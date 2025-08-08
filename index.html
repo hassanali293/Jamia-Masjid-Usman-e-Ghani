@@ -76,11 +76,94 @@
               </svg>
             </button>
           </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jamia Masjid Usman-e-Ghani - Donation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .nav-link.active {
+        background-color: #c2c7c2;
+        color: #065f46;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="text-xl font-bold text-green-700">
+            Jamia Masjid Usman-e-Ghani
+          </div>
+          <div class="hidden md:flex items-center space-x-2">
+            <a
+              href="index.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Home</a
+            >
+            <a
+              href="namaz-timing.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Namaz Timing</a
+            >
+            <a
+              href="members.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Members</a
+            >
+            <a
+              href="about.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >About</a
+            >
+            <a
+              href="donation.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active"
+              >Donation</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Contact Us</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-green-700 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden pb-4">
           <a
             href="index.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
             >Home</a
           >
           <a
@@ -99,13 +182,18 @@
             >About</a
           >
           <a
+            href="donation.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active"
+            >Donation</a
+          >
+          <a
             href="contact.html"
             class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
             >Contact Us</a
           >
         </div>
       </nav>
-    </header>
+  </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="space-y-8">
@@ -180,3 +268,4 @@
     </script>
   </body>
 </html>
+

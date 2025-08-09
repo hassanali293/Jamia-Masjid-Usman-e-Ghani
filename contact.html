@@ -1,257 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jamia Masjid Usman-e-Ghani - Contact</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
 
-      .nav-link.active {
-        background-color: #c2c7c2;
-        color: #065f46;
-        font-weight: 600;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jamia Masjid Usman-e-Ghani - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
 
-      .mapouter {
-        position: relative;
-        text-align: right;
-        width: 100%;
-        height: 400px;
-      }
+    .nav-link.active {
+      background-color: #c2c7c2;
+      color: #065f46;
+      font-weight: 600;
+    }
 
-      .gmap_canvas {
-        overflow: hidden;
-        background: none !important;
-        width: 100%;
-        height: 400px;
-      }
+    .mapouter {
+      position: relative;
+      text-align: right;
+      width: 100%;
+      height: 400px;
+    }
 
-      .gmap_iframe {
-        width: 100%;
-        height: 400px !important;
-      }
-    </style>
-  </head>
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      width: 100%;
+      height: 400px;
+    }
 
-  <body class="bg-gray-50">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
-          <div class="text-xl font-bold text-green-700">
-            Jamia Masjid Usman-e-Ghani
-          </div>
-          <div class="hidden md:flex items-center space-x-2">
-            <a
-              href="index.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Home</a
-            >
-            <a
-              href="namaz-timing.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Namaz Timing</a
-            >
-            <a
-              href="members.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Members</a
-            >
-            <a
-              href="about.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >About</a
-            >
-            <a
-              href="contact.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active"
-              >Contact Us</a
-            >
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-700 hover:text-green-700 focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
+    .gmap_iframe {
+      width: 100%;
+      height: 400px !important;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-xl font-bold text-green-700">
+          Jamia Masjid Usman-e-Ghani
+        </div>
+        <div class="hidden md:flex items-center space-x-2">
+          <a href="index.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+          <a href="namaz-timing.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
+            Timing</a>
+          <a href="members.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+          <a href="about.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <a href="donation.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">
+            Donation</a>
+          <a href="contact.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">Contact
+            Us</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+        <a href="namaz-timing.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
+          Timing</a>
+        <a href="members.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+        <a href="about.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+        <a href="donation.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
+        <a href="contact.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Contact
+          Us</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="space-y-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-green-800">Contact Us</h1>
+        <p class="text-gray-600 mt-2">We would love to hear from you.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-green-700 mb-4">Get in Touch</h2>
+          <div class="space-y-4 text-gray-700">
+            <p>
+              <strong>Address:</strong> ST-11, Sector 5-A/1, North Karachi,
+              Karachi, Pakistan
+            </p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p>
+              <strong>Email:</strong> contact@usmanmasjid.org
+            </p>
           </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a
-            href="index.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Home</a
-          >
-          <a
-            href="namaz-timing.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Namaz Timing</a
-          >
-          <a
-            href="members.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Members</a
-          >
-          <a
-            href="about.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >About</a
-          >
-          <a
-            href="contact.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active"
-            >Contact Us</a
-          >
-        </div>
-      </nav>
-    </header>
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="space-y-8">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold text-green-800">Contact Us</h1>
-          <p class="text-gray-600 mt-2">We would love to hear from you.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-green-700 mb-4">Get in Touch</h2>
-            <div class="space-y-4 text-gray-700">
-              <p>
-                <strong>Address:</strong> ST-11, Sector 5-A/1, North Karachi,
-                Karachi, Pakistan
-              </p>
-              <p><strong>Phone:</strong> (123) 456-7890</p>
-              <p>
-                <strong>Email:</strong> contact@usmanmasjid.org
-              </p>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-green-700 mb-4">
+            Send us a Message
+          </h2>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name"
+                class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500" />
             </div>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-green-700 mb-4">
-              Send us a Message
-            </h2>
-            <form class="space-y-4">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe
-              class="gmap_iframe"
-              width="100%"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Usman Ghani (R.A) Masjid, 5-A/1, North Karachi&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            ></iframe
-            ><a href="https://embedgooglemap.xyz/">add google map in html</a>
-          </div>
-          <style>
-            .mapouter {
-              position: relative;
-              text-align: right;
-              width: 100%;
-              height: 400px;
-            }
-
-            .gmap_canvas {
-              overflow: hidden;
-              background: none !important;
-              width: 100%;
-              height: 400px;
-            }
-
-            .gmap_iframe {
-              height: 400px !important;
-            }
-          </style>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email"
+                class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" rows="4"
+                class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
-    </main>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Usman Ghani (R.A) Masjid, 5-A/1, North Karachi&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+            href="https://embedgooglemap.xyz/">add google map in html</a>
+        </div>
+        <style>
+          .mapouter {
+            position: relative;
+            text-align: right;
+            width: 100%;
+            height: 400px;
+          }
 
-    <footer class="bg-gray-800 text-white mt-12">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
-        <p>
-          © <span id="year"></span> Jamia Masjid Usman-e-Ghani. All Rights
-          Reserved.
-        </p>
-        <p class="text-sm text-gray-400 mt-1">
-          ST-11, Sector 5-A/1, North Karachi, Karachi
-        </p>
+          .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            width: 100%;
+            height: 400px;
+          }
+
+          .gmap_iframe {
+            height: 400px !important;
+          }
+
+          @keyframes blink {
+            0% {
+              background-color: #1cf36b;
+              /* A bright neon green */
+            }
+
+            50% {
+              background-color: #d5e7dc;
+              /* A very light, pale green */
+            }
+
+            100% {
+              background-color: #47c776;
+            }
+          }
+
+          .animate-blink {
+            animation: blink 2s infinite;
+          }
+        </style>
       </div>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+      <p>
+        © <span id="year"></span> Jamia Masjid Usman-e-Ghani. All Rights
+        Reserved.
+      </p>
+      <p class="text-sm text-gray-400 mt-1">
+        ST-11, Sector 5-A/1, North Karachi, Karachi
+      </p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>

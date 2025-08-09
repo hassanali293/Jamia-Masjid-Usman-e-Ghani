@@ -16,3 +16,21 @@ body {
   color: white;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
+
+
+@keyframes blink {
+  0% {
+    background-color: #d1fae5; /* A light green */
+  }
+  50% {
+    background-color: #bfdbfe; /* A light blue */
+  }
+  100% {
+    background-color: #d1fae5;
+  }
+}
+
+
+.animate-blink {
+  animation: blink 2s infinite;
+}

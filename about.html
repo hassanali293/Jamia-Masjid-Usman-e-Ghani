@@ -19,6 +19,26 @@
       color: #065f46;
       font-weight: 600;
     }
+
+    @keyframes blink {
+      0% {
+        background-color: #1cf36b;
+        /* A bright neon green */
+      }
+
+      50% {
+        background-color: #d5e7dc;
+        /* A very light, pale green */
+      }
+
+      100% {
+        background-color: #47c776;
+      }
+    }
+
+    .animate-blink {
+      animation: blink 2s infinite;
+    }
   </style>
 </head>
 
@@ -37,6 +57,9 @@
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
           <a href="about.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">About</a>
+          <a href="donation.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">
+            Donation</a>
           <a href="contact.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
             Us</a>
@@ -59,6 +82,8 @@
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
         <a href="about.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">About</a>
+        <a href="donation.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
         <a href="contact.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
           Us</a>

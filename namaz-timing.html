@@ -218,7 +218,7 @@
                     August
                   </th>
                   <td class="px-6 py-4 text-center">5:45 AM</td>
-                  <td class="px-6 py-4 text-center">5:15 PM</td>
+                  <td class="px-6 py-4 text-center">5:30 PM</td>
                   <td class="px-6 py-4 text-center">8:45 PM</td>
                 </tr>
                 <tr class="bg-white border-b">
@@ -226,7 +226,7 @@
                     September
                   </th>
                   <td class="px-6 py-4 text-center">6:00 AM</td>
-                  <td class="px-6 py-4 text-center">5:00 PM</td>
+                  <td class="px-6 py-4 text-center">5:15 PM</td>
                   <td class="px-6 py-4 text-center">8:15 PM</td>
                 </tr>
                 <tr class="bg-green-50 border-b">
@@ -234,7 +234,7 @@
                     October
                   </th>
                   <td class="px-6 py-4 text-center">6:15 AM</td>
-                  <td class="px-6 py-4 text-center">4:45 PM</td>
+                  <td class="px-6 py-4 text-center">5:00 PM</td>
                   <td class="px-6 py-4 text-center">8:00 PM</td>
                 </tr>
                 <tr class="bg-white border-b">
@@ -242,7 +242,7 @@
                     November
                   </th>
                   <td class="px-6 py-4 text-center">6:30 AM</td>
-                  <td class="px-6 py-4 text-center">4:30 PM</td>
+                  <td class="px-6 py-4 text-center">4:45 PM</td>
                   <td class="px-6 py-4 text-center">7:45 PM</td>
                 </tr>
                 <tr class="bg-green-50">
@@ -259,7 +259,7 @@
           <div class="p-4 text-center text-sm text-gray-500 bg-gray-50">
             <p>
               <strong>Note:</strong> Dhuhr (1:30 PM), Jummah (1:50 PM), and
-              Maghrib (3 mins after Adhan) times are fixed year-round. This
+              Maghrib (5 mins after Adhan) times are fixed year-round. This
               table shows monthly changes for other prayers.
             </p>
           </div>
@@ -289,8 +289,8 @@
     </div>
   </footer>
 
-  <audio id="azan-audio" preload="auto" src="a2.mp3"></audio>
-  <audio id="iqamah-audio" preload="auto" src="a2.mp3"></audio>
+  <audio id="azan-audio" preload="auto" src="azan.aac"></audio>
+  <audio id="iqamah-audio" preload="auto" src="Iqamat.mp3"></audio>
 
   <script>
     let clockInterval = null;
@@ -569,11 +569,11 @@
         prayerTimesData = timings.timings;
 
         // Change: Calculate Jamaat times based on your rules
-        jamaatTimesData.Fajr = addMinutes(timings.timings.Fajr, 31);
+        jamaatTimesData.Fajr ="5:30";
         jamaatTimesData.Dhuhr = "13:30";
-        jamaatTimesData.Asr = addMinutes(timings.timings.Asr, 28);
-        jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 3);
-        jamaatTimesData.Isha = addMinutes(timings.timings.Isha, 24);
+        jamaatTimesData.Asr = "17:45";
+        jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
+        jamaatTimesData.Isha = "21:00";
         jamaatTimesData.Jummah = "13:50"; // For Friday
 
         // Initialize played statuses
@@ -651,5 +651,6 @@
     }
   </script>
 </body>
+
 
 </html>

@@ -30,6 +30,13 @@
       color: #4b5563;
       /* gray-700 */
       transition: background-color 0.2s, color 0.2s;
+      border-bottom: 1px solid #e5e7eb;
+      /* Add a light gray border */
+    }
+
+    .dropdown-item:last-child {
+      border-bottom: none;
+      /* Remove the border from the last item */
     }
 
     .dropdown-item:hover {
@@ -99,21 +106,28 @@
             Us</a>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a href="index.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Home</a>
-          <a href="namaz-timing.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
-            Timing</a>
-          <a href="members.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
-          <a href="about.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
-
-          <div class="relative">
-            <button id="media-mobile-button"
-              class="block w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
-            <div id="media-mobile-dropdown" class="hidden pl-4">
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+        <a href="namaz-timing.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
+          Timing</a>
+        <a href="members.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+        <a href="about.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">About</a>
+        <div class="relative group">
+            <button
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
+            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10">
               <a href="gallery.html"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100 hover:text-green-800">Gallery</a>
               <a href="tilawat.html"
@@ -121,14 +135,12 @@
               <a href="video.html"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100 hover:text-green-800">Video</a>
             </div>
-          </div>
-
           <a href="donation.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
-          <a href="contact.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
-            Us</a>
-        </div>
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
+        <a href="contact.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
+          Us</a>
+      </div>
     </nav>
   </header>
 
@@ -194,6 +206,7 @@
   </footer>
 
   <script>
+    // Your existing script to handle the mobile menu and year
     document.getElementById("year").textContent = new Date().getFullYear();
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -201,7 +214,7 @@
       mobileMenu.classList.toggle("hidden");
     });
 
-    // JavaScript for the new mobile dropdown
+    // The new JavaScript for the dropdown goes here.
     const mediaMobileButton = document.getElementById("media-mobile-button");
     const mediaMobileDropdown = document.getElementById("media-mobile-dropdown");
     mediaMobileButton.addEventListener("click", () => {

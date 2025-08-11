@@ -20,6 +20,27 @@
       font-weight: 600;
     }
 
+    /* This is the new CSS rule for the dropdown links */
+    .dropdown-item {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      display: block;
+      font-size: 0.875rem;
+      color: #4b5563;
+      transition: background-color 0.2s, color 0.2s;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .dropdown-item:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-item:hover {
+      background-color: #d1fae5;
+      color: #047857;
+    }
+
+
     @keyframes blink {
       0% {
         background-color: #1cf36b;
@@ -59,9 +80,17 @@
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
           <a href="about.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <div class="relative group">
+            <button
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
+            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10">
+              <a href="gallery.html" class="dropdown-item">Gallery</a>
+              <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+              <a href="video.html" class="dropdown-item">Video</a>
+            </div>
+          </div>
           <a href="donation.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">
-            Donation</a>
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
           <a href="contact.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
             Us</a>
@@ -81,9 +110,18 @@
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
           Timing</a>
         <a href="members.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Members</a>
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
         <a href="about.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+        <div class="relative">
+          <button id="media-mobile-button"
+            class="block w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
+          <div id="media-mobile-dropdown" class="hidden pl-4">
+            <a href="gallery.html" class="dropdown-item">Gallery</a>
+            <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+            <a href="video.html" class="dropdown-item">Video</a>
+          </div>
+        </div>
         <a href="donation.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
         <a href="contact.html"
@@ -92,6 +130,7 @@
       </div>
     </nav>
   </header>
+
   <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="space-y-8">
       <div class="text-center">

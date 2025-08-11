@@ -26,26 +26,19 @@
       padding: 0.5rem 1rem;
       display: block;
       font-size: 0.875rem;
-      /* text-sm */
       color: #4b5563;
-      /* gray-700 */
       transition: background-color 0.2s, color 0.2s;
       border-bottom: 1px solid #e5e7eb;
-      /* Add a light gray border */
     }
 
     .dropdown-item:last-child {
       border-bottom: none;
-      /* Remove the border from the last item */
     }
 
     .dropdown-item:hover {
       background-color: #d1fae5;
-      /* green-100 */
       color: #047857;
-      /* green-800 */
     }
-
 
     .current-prayer-highlight {
       background-color: #ffd700 !important;
@@ -90,15 +83,23 @@
           <a href="index.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
           <a href="namaz-timing.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
             Timing</a>
           <a href="members.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
           <a href="about.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <div class="relative group">
+            <button
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
+            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10">
+              <a href="gallery.html" class="dropdown-item">Gallery</a>
+              <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+              <a href="video.html" class="dropdown-item">Video</a>
+            </div>
+          </div>
           <a href="donation.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">
-            Donation</a>
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
           <a href="contact.html"
             class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
             Us</a>
@@ -115,12 +116,21 @@
         <a href="index.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
         <a href="namaz-timing.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 active">Namaz
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
           Timing</a>
         <a href="members.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
         <a href="about.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+        <div class="relative">
+          <button id="media-mobile-button"
+            class="block w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Media</button>
+          <div id="media-mobile-dropdown" class="hidden pl-4">
+            <a href="gallery.html" class="dropdown-item">Gallery</a>
+            <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+            <a href="video.html" class="dropdown-item">Video</a>
+          </div>
+        </div>
         <a href="donation.html"
           class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
         <a href="contact.html"

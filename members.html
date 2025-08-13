@@ -193,13 +193,22 @@
     </div>
   </footer>
   <script>
+    // Your existing script to handle the mobile menu and year
     document.getElementById("year").textContent = new Date().getFullYear();
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
     mobileMenuButton.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
+
+    // The new JavaScript for the dropdown goes here.
+    const mediaMobileButton = document.getElementById("media-mobile-button");
+    const mediaMobileDropdown = document.getElementById("media-mobile-dropdown");
+    mediaMobileButton.addEventListener("click", () => {
+      mediaMobileDropdown.classList.toggle("hidden");
+    });
   </script>
 </body>
+
 
 </html>

@@ -226,28 +226,22 @@
 
     <!-- JavaScript for Mobile Menu -->
     <script>
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
+    // Your existing script to handle the mobile menu and year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
 
-        mobileMenuButton.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-
-        // Simple script to set the active nav link based on the current page
-        document.addEventListener("DOMContentLoaded", (event) => {
-            const navLinks = document.querySelectorAll(".nav-link");
-            const currentPage = window.location.pathname.split("/").pop();
-
-            navLinks.forEach((link) => {
-                const linkPage = link.getAttribute("href");
-                if (linkPage === currentPage) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
-                }
-            });
-        });
-    </script>
+    // The new JavaScript for the dropdown goes here.
+    const mediaMobileButton = document.getElementById("media-mobile-button");
+    const mediaMobileDropdown = document.getElementById("media-mobile-dropdown");
+    mediaMobileButton.addEventListener("click", () => {
+      mediaMobileDropdown.classList.toggle("hidden");
+    });
+  </script>
 </body>
+
 
 </html>

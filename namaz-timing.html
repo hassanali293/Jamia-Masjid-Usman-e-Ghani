@@ -337,6 +337,18 @@
     let jamaatPlayedStatus = {};
     let allEvents = []; // Change: Will hold all events (Adhan, Jamaat) sorted by time
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+      fetchNamazTimings();
+
+      const audioBanner = document.getElementById("audio-permission-banner");
+      const closeBannerBtn = document.getElementById("close-banner-btn");
 
       function enableAudio() {
         const azanAudio = document.getElementById("azan-audio");
@@ -696,4 +708,3 @@
 
 
 </html>
-

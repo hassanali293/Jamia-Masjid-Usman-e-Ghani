@@ -20,7 +20,6 @@
       font-weight: 600;
     }
 
-    /* This is the new CSS rule for the dropdown links */
     .dropdown-item {
       cursor: pointer;
       padding: 0.5rem 1rem;
@@ -141,7 +140,9 @@
           Your spiritual center in North Karachi, Sector 5-A/1. A place for
           prayer, community, and learning.
         </p>
-      </div>
+        <div id="digital-clock" class="text-xl md:text-3xl font-semibold text-green-700 mt-6 bg-white/50 py-2 px-4 rounded-lg inline-block shadow">
+          </div>
+        </div>
       <div class="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8">
         <h2 class="text-2xl font-bold text-green-700 mb-4">
           A Message from the Imam
@@ -201,12 +202,34 @@
       mobileMenu.classList.toggle("hidden");
     });
 
-    // The new JavaScript for the dropdown goes here.
     const mediaMobileButton = document.getElementById("media-mobile-button");
     const mediaMobileDropdown = document.getElementById("media-mobile-dropdown");
     mediaMobileButton.addEventListener("click", () => {
       mediaMobileDropdown.classList.toggle("hidden");
     });
+
+    // ===== START: Digital Clock Script =====
+    const clockElement = document.getElementById('digital-clock');
+
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+
+      hours = hours % 12;
+      hours = hours ? hours : 12; // The hour '0' should be '12'
+      const hoursStr = hours.toString().padStart(2, '0');
+
+      const timeString = `${hoursStr}:${minutes}:${seconds} ${ampm}`;
+      clockElement.textContent = timeString;
+    }
+
+    // Update the clock immediately and then every second
+    updateClock();
+    setInterval(updateClock, 1000);
+    // ===== END: Digital Clock Script =====
   </script>
 </body>
 

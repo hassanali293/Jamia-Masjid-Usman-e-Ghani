@@ -78,120 +78,78 @@
           <div class="text-xl font-bold text-green-700">
             Jamia Masjid Usman-e-Ghani
           </div>
-          <div class="hidden md:flex items-center space-x-2">
-            <a
-              href="index.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Home</a
-            >
-            <a
-              href="namaz-timing.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Namaz Timing</a
-            >
-            <a
-              href="members.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Members</a
-            >
-            <a
-              href="about.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >About</a
-            >
-            <div class="relative group">
-              <button
-                class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >
-                Media
-              </button>
-              <div
-                class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10"
-              >
-                <a href="gallery.html" class="dropdown-item">Gallery</a>
-                <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
-                <a href="video.html" class="dropdown-item">Video</a>
-              </div>
-            </div>
-            <a
-              href="donation.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink"
-              >Donation</a
-            >
-            <a
-              href="contact.html"
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
-              >Contact Us</a
-            >
-          </div>
-          <div class="md:hidden">
+           <div class="hidden md:flex items-center space-x-2">
+          <a href="index.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+          <a href="namaz-timing.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
+            Timing</a>
+          <a href="members.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+          <a href="about.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+          <div class="relative group">
             <button
-              id="mobile-menu-button"
-              class="text-gray-700 hover:text-green-700 focus:outline-none"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 flex items-center">
+              Media
+              <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-          </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a
-            href="index.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Home</a
-          >
-          <a
-            href="namaz-timing.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Namaz Timing</a
-          >
-          <a
-            href="members.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Members</a
-          >
-          <a
-            href="about.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >About</a
-          >
-          <div class="relative">
-            <button
-              id="media-mobile-button"
-              class="block w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >
-              Media
-            </button>
-            <div id="media-mobile-dropdown" class="hidden pl-4">
+            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10">
               <a href="gallery.html" class="dropdown-item">Gallery</a>
               <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
               <a href="video.html" class="dropdown-item">Video</a>
             </div>
           </div>
-          <a
-            href="donation.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink"
-            >Donation</a
-          >
-          <a
-            href="contact.html"
-            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
-            >Contact Us</a
-          >
+          <a href="donation.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
+          <a href="contact.html"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
+            Us</a>
         </div>
-      </nav>
-    </header>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="index.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
+        <a href="namaz-timing.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
+          Timing</a>
+        <a href="members.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
+        <a href="about.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
+        <div class="relative">
+          <button id="media-mobile-button"
+            class="flex items-center justify-between w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">
+            <span>Media</span>
+            <svg id="media-arrow-mobile" class="w-4 h-4 transition-transform duration-200" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="media-mobile-dropdown" class="hidden pl-4">
+            <a href="gallery.html" class="dropdown-item">Gallery</a>
+            <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+            <a href="video.html" class="dropdown-item">Video</a>
+          </div>
+        </div>
+        <a href="donation.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
+        <a href="contact.html"
+          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
+          Us</a>
+      </div>
+    </nav>
+  </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div
@@ -799,3 +757,4 @@
     </script>
   </body>
 </html>
+

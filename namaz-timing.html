@@ -78,78 +78,149 @@
           <div class="text-xl font-bold text-green-700">
             Jamia Masjid Usman-e-Ghani
           </div>
-           <div class="hidden md:flex items-center space-x-2">
-          <a href="index.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
-          <a href="namaz-timing.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
-            Timing</a>
-          <a href="members.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
-          <a href="about.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
-          <div class="relative group">
+          <div class="hidden md:flex items-center space-x-2">
+            <a
+              href="index.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Home</a
+            >
+            <a
+              href="namaz-timing.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Namaz Timing</a
+            >
+            <a
+              href="members.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Members</a
+            >
+            <a
+              href="about.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >About</a
+            >
+            <div class="relative group">
+              <button
+                class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 flex items-center"
+              >
+                Media
+                <svg
+                  class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10"
+              >
+                <a href="gallery.html" class="dropdown-item">Gallery</a>
+                <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
+                <a href="video.html" class="dropdown-item">Videos</a>
+              </div>
+            </div>
+            <a
+              href="donation.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink"
+              >Donation</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800"
+              >Contact Us</a
+            >
+          </div>
+          <div class="md:hidden">
             <button
-              class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 flex items-center">
-              Media
-              <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              id="mobile-menu-button"
+              class="text-gray-700 hover:text-green-700 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
               </svg>
             </button>
-            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2 py-1 z-10">
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="index.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >Home</a
+          >
+          <a
+            href="namaz-timing.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >Namaz Timing</a
+          >
+          <a
+            href="members.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >Members</a
+          >
+          <a
+            href="about.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >About</a
+          >
+          <div class="relative">
+            <button
+              id="media-mobile-button"
+              class="flex items-center justify-between w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >
+              <span>Media</span>
+              <svg
+                id="media-arrow-mobile"
+                class="w-4 h-4 transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="media-mobile-dropdown" class="hidden pl-4">
               <a href="gallery.html" class="dropdown-item">Gallery</a>
               <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
               <a href="video.html" class="dropdown-item">Videos</a>
             </div>
           </div>
-          <a href="donation.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
-          <a href="contact.html"
-            class="nav-link px-4 py-2 text-sm font-medium rounded-md transition-colors duration-200 text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
-            Us</a>
+          <a
+            href="donation.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink"
+            >Donation</a
+          >
+          <a
+            href="contact.html"
+            class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800"
+            >Contact Us</a
+          >
         </div>
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-700 hover:text-green-700 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <a href="index.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Home</a>
-        <a href="namaz-timing.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Namaz
-          Timing</a>
-        <a href="members.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Members</a>
-        <a href="about.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">About</a>
-        <div class="relative">
-          <button id="media-mobile-button"
-            class="flex items-center justify-between w-full text-left nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">
-            <span>Media</span>
-            <svg id="media-arrow-mobile" class="w-4 h-4 transition-transform duration-200" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="media-mobile-dropdown" class="hidden pl-4">
-            <a href="gallery.html" class="dropdown-item">Gallery</a>
-            <a href="tilawat.html" class="dropdown-item active">Tilawat</a>
-            <a href="video.html" class="dropdown-item">Videos</a>
-          </div>
-        </div>
-        <a href="donation.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800 animate-blink">Donation</a>
-        <a href="contact.html"
-          class="block nav-link px-4 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-green-100 hover:text-green-800">Contact
-          Us</a>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div
@@ -178,7 +249,9 @@
       <div class="space-y-8">
         <div class="text-center">
           <h1 class="text-4xl font-bold text-green-800">Namaz Timings</h1>
-          <p id="namaz-date" class="text-gray-600 mt-2">Loading date...</p>
+          <p id="namaz-date" class="text-gray-600 mt-2 leading-tight">
+            Loading date...
+          </p>
         </div>
         <div id="namaz-loader" class="flex justify-center items-center h-full">
           <div
@@ -217,91 +290,150 @@
                   </tr>
                 </thead>
                 <tbody>
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">January</th>
-    <td class="px-6 py-4 text-center">6:30 AM <br> 6:35 AM</td>
-    <td class="px-6 py-4 text-center">4:45 PM</td>
-    <td class="px-6 py-4 text-center">8:00 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      January
+                    </th>
+                    <td class="px-6 py-4 text-center">6:30 AM <br /> 6:35 AM</td>
+                    <td class="px-6 py-4 text-center">4:45 PM</td>
+                    <td class="px-6 py-4 text-center">8:00 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50 border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">February</th>
-    <td class="px-6 py-4 text-center">6:15 AM <br> 6:20 AM</td>
-    <td class="px-6 py-4 text-center">5:00 PM</td>
-    <td class="px-6 py-4 text-center">8:00 PM</td>
-  </tr>
+                  <tr class="bg-green-50 border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      February
+                    </th>
+                    <td class="px-6 py-4 text-center">6:15 AM <br /> 6:20 AM</td>
+                    <td class="px-6 py-4 text-center">5:00 PM</td>
+                    <td class="px-6 py-4 text-center">8:00 PM</td>
+                  </tr>
 
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">March</th>
-    <td class="px-6 py-4 text-center">6:00 AM <br> 6:05 AM</td>
-    <td class="px-6 py-4 text-center">5:15 PM</td>
-    <td class="px-6 py-4 text-center">8:15 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      March
+                    </th>
+                    <td class="px-6 py-4 text-center">6:00 AM <br /> 6:05 AM</td>
+                    <td class="px-6 py-4 text-center">5:15 PM</td>
+                    <td class="px-6 py-4 text-center">8:15 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50 border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">April</th>
-    <td class="px-6 py-4 text-center">5:45 AM <br> 5:50 AM</td>
-    <td class="px-6 py-4 text-center">5:30 PM</td>
-    <td class="px-6 py-4 text-center">8:30 PM</td>
-  </tr>
+                  <tr class="bg-green-50 border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      April
+                    </th>
+                    <td class="px-6 py-4 text-center">5:45 AM <br /> 5:50 AM</td>
+                    <td class="px-6 py-4 text-center">5:30 PM</td>
+                    <td class="px-6 py-4 text-center">8:30 PM</td>
+                  </tr>
 
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">May</th>
-    <td class="px-6 py-4 text-center">5:30 AM <br> 5:35 AM</td>
-    <td class="px-6 py-4 text-center">5:45 PM</td>
-    <td class="px-6 py-4 text-center">8:45 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      May
+                    </th>
+                    <td class="px-6 py-4 text-center">5:30 AM <br /> 5:35 AM</td>
+                    <td class="px-6 py-4 text-center">5:45 PM</td>
+                    <td class="px-6 py-4 text-center">8:45 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50 border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">June</th>
-    <td class="px-6 py-4 text-center">5:30 AM <br> 5:35 AM</td>
-    <td class="px-6 py-4 text-center">5:45 PM</td>
-    <td class="px-6 py-4 text-center">9:00 PM</td>
-  </tr>
+                  <tr class="bg-green-50 border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      June
+                    </th>
+                    <td class="px-6 py-4 text-center">5:30 AM <br /> 5:35 AM</td>
+                    <td class="px-6 py-4 text-center">5:45 PM</td>
+                    <td class="px-6 py-4 text-center">9:00 PM</td>
+                  </tr>
 
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">July</th>
-    <td class="px-6 py-4 text-center">5:30 AM <br> 5:35 AM</td>
-    <td class="px-6 py-4 text-center">5:45 PM</td>
-    <td class="px-6 py-4 text-center">9:00 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      July
+                    </th>
+                    <td class="px-6 py-4 text-center">5:30 AM <br /> 5:35 AM</td>
+                    <td class="px-6 py-4 text-center">5:45 PM</td>
+                    <td class="px-6 py-4 text-center">9:00 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50 border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">August</th>
-    <td class="px-6 py-4 text-center">5:35 AM <br> 5:40 AM</td>
-    <td class="px-6 py-4 text-center">5:30 PM</td>
-    <td class="px-6 py-4 text-center">8:45 PM</td>
-  </tr>
+                  <tr class="bg-green-50 border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      August
+                    </th>
+                    <td class="px-6 py-4 text-center">5:35 AM <br /> 5:40 AM</td>
+                    <td class="px-6 py-4 text-center">5:30 PM</td>
+                    <td class="px-6 py-4 text-center">8:45 PM</td>
+                  </tr>
 
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">September</th>
-    <td class="px-6 py-4 text-center">6:00 AM <br> 6:05 AM</td>
-    <td class="px-6 py-4 text-center">5:15 PM</td>
-    <td class="px-6 py-4 text-center">8:15 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      September
+                    </th>
+                    <td class="px-6 py-4 text-center">6:00 AM <br /> 6:05 AM</td>
+                    <td class="px-6 py-4 text-center">5:15 PM</td>
+                    <td class="px-6 py-4 text-center">8:15 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50 border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">October</th>
-    <td class="px-6 py-4 text-center">6:15 AM <br> 6:20 AM</td>
-    <td class="px-6 py-4 text-center">5:00 PM</td>
-    <td class="px-6 py-4 text-center">8:00 PM</td>
-  </tr>
+                  <tr class="bg-green-50 border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      October
+                    </th>
+                    <td class="px-6 py-4 text-center">6:15 AM <br /> 6:20 AM</td>
+                    <td class="px-6 py-4 text-center">5:00 PM</td>
+                    <td class="px-6 py-4 text-center">8:00 PM</td>
+                  </tr>
 
-  <tr class="bg-white border-b">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">November</th>
-    <td class="px-6 py-4 text-center">6:30 AM <br> 6:35 AM</td>
-    <td class="px-6 py-4 text-center">4:45 PM</td>
-    <td class="px-6 py-4 text-center">7:45 PM</td>
-  </tr>
+                  <tr class="bg-white border-b">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      November
+                    </th>
+                    <td class="px-6 py-4 text-center">6:30 AM <br /> 6:35 AM</td>
+                    <td class="px-6 py-4 text-center">4:45 PM</td>
+                    <td class="px-6 py-4 text-center">7:45 PM</td>
+                  </tr>
 
-  <tr class="bg-green-50">
-    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">December</th>
-    <td class="px-6 py-4 text-center">6:45 AM <br> 6:50 AM</td>
-    <td class="px-6 py-4 text-center">4:30 PM</td>
-    <td class="px-6 py-4 text-center">7:45 PM</td>
-  </tr>
-</tbody>
-
+                  <tr class="bg-green-50">
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      December
+                    </th>
+                    <td class="px-6 py-4 text-center">6:45 AM <br /> 6:50 AM</td>
+                    <td class="px-6 py-4 text-center">4:30 PM</td>
+                    <td class="px-6 py-4 text-center">7:45 PM</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <div class="p-4 text-center text-sm text-gray-500 bg-gray-50">
@@ -320,8 +452,10 @@
       id="audio-permission-banner"
       class="fixed bottom-0 left-0 right-0 bg-blue-100 border-t border-blue-200 p-3 text-center text-blue-800 z-50 flex justify-between items-center"
     >
-      <span>Click anywhere on the page to enable Azan & Aqamat audio
-        notifications.</span>
+      <span
+        >Click anywhere on the page to enable Azan & Aqamat audio
+        notifications.</span
+      >
       <button id="close-banner-btn" class="text-blue-800 font-bold text-xl px-2">
         &times;
       </button>
@@ -354,7 +488,9 @@
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
         const mediaMobileButton = document.getElementById("media-mobile-button");
-        const mediaMobileDropdown = document.getElementById("media-mobile-dropdown");
+        const mediaMobileDropdown = document.getElementById(
+          "media-mobile-dropdown"
+        );
 
         mobileMenuButton.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
@@ -391,7 +527,7 @@
         }
 
         document.body.addEventListener("click", enableAudio, {
-          once: true
+          once: true,
         });
         closeBannerBtn.addEventListener("click", (e) => {
           e.stopPropagation();
@@ -531,9 +667,9 @@
           const seconds = timeToNextEventInSeconds % 60;
 
           const eventDisplayName =
-            nextEvent.type === "Jamaat" ?
-            `${nextEvent.name} Jamaat` :
-            `${nextEvent.name}`;
+            nextEvent.type === "Jamaat"
+              ? `${nextEvent.name} Jamaat`
+              : `${nextEvent.name}`;
           document.querySelector(
             "#next-prayer-info p:first-child"
           ).textContent = `Time until ${eventDisplayName}:`;
@@ -581,9 +717,9 @@
               document.getElementById("morning-dua").classList.remove("hidden");
               setTimeout(
                 () =>
-                document
-                .getElementById("morning-dua")
-                .classList.add("hidden"),
+                  document
+                    .getElementById("morning-dua")
+                    .classList.add("hidden"),
                 5 * 60 * 1000
               );
               playedStatus[nextEvent.name] = true;
@@ -616,7 +752,7 @@
           prayerTimesData = timings.timings;
 
           // Fixed Jamaat Times
-          jamaatTimesData.Fajr = "5:35";
+          jamaatTimesData.Fajr = "5:40";
           jamaatTimesData.Dhuhr = "13:30";
           jamaatTimesData.Asr = "17:30";
           jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
@@ -631,33 +767,44 @@
           );
 
           const isFriday = new Date(timings.date.readable).getDay() === 5;
-          
-          // Fixed Hijri date and weekday display
-          const hijriDate = timings.date.hijri;
-          const formattedHijriDate = `${hijriDate.weekday.en}, ${hijriDate.day} ${hijriDate.month.en} ${hijriDate.year} AH`;
 
-          dateEl.textContent = `${timings.date.readable} (${formattedHijriDate})`;
+          // UPDATED CODE BLOCK STARTS HERE
+          const hijriDate = timings.date.hijri;
+          const gregorianDate = timings.date.gregorian;
+          const formattedHijriDate = `${hijriDate.day} ${hijriDate.month.en} ${hijriDate.year} AH`;
+          const formattedGregorianDate = `${gregorianDate.weekday.en}, ${timings.date.readable}`;
+
+          dateEl.innerHTML = `<span class="text-xl font-bold text-green-800">${formattedHijriDate}</span><br><span class="text-sm text-gray-500">${formattedGregorianDate}</span>`;
+          // UPDATED CODE BLOCK ENDS HERE
+
           container.innerHTML = "";
 
-          const prayerDisplayOrder = [{
-            name: "Fajr",
-            time: timings.timings.Fajr
-          }, {
-            name: "Sunrise",
-            time: timings.timings.Sunrise
-          }, {
-            name: "Dhuhr",
-            time: timings.timings.Dhuhr
-          }, {
-            name: "Asr",
-            time: timings.timings.Asr
-          }, {
-            name: "Maghrib",
-            time: timings.timings.Maghrib
-          }, {
-            name: "Isha",
-            time: timings.timings.Isha
-          }, ];
+          const prayerDisplayOrder = [
+            {
+              name: "Fajr",
+              time: timings.timings.Fajr,
+            },
+            {
+              name: "Sunrise",
+              time: timings.timings.Sunrise,
+            },
+            {
+              name: "Dhuhr",
+              time: timings.timings.Dhuhr,
+            },
+            {
+              name: "Asr",
+              time: timings.timings.Asr,
+            },
+            {
+              name: "Maghrib",
+              time: timings.timings.Maghrib,
+            },
+            {
+              name: "Isha",
+              time: timings.timings.Isha,
+            },
+          ];
 
           prayerDisplayOrder.forEach((prayer, index) => {
             const isJummahPrayer = isFriday && prayer.name === "Dhuhr";
@@ -685,13 +832,13 @@
 
             const adhanLabel = prayer.name === "Sunrise" ? "Time" : "Adhan";
             row.innerHTML = `
-                <p class="text-lg font-semibold text-green-800">${displayName}</p>
-                <div class="text-right">
-                    <p class="text-xl font-bold text-gray-700">
-                        <span class="text-sm font-medium text-gray-500">${adhanLabel}: </span>${prayer.time}
-                    </p>
-                    ${jamaatHtml}
-                </div>`;
+                        <p class="text-lg font-semibold text-green-800">${displayName}</p>
+                        <div class="text-right">
+                            <p class="text-xl font-bold text-gray-700">
+                                <span class="text-sm font-medium text-gray-500">${adhanLabel}: </span>${prayer.time}
+                            </p>
+                            ${jamaatHtml}
+                        </div>`;
             container.appendChild(row);
           });
 
@@ -709,8 +856,6 @@
     </script>
   </body>
 </html>
-
-
 
 
 

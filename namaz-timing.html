@@ -249,10 +249,29 @@
       <div class="space-y-8">
         <div class="text-center">
           <h1 class="text-4xl font-bold text-green-800">Namaz Timings</h1>
-          <p id="namaz-date" class="text-gray-600 mt-2 leading-tight">
-            Loading date...
-          </p>
-        </div>
+          <div
+            id="date-container"
+            class="flex items-center justify-center gap-3 mt-2"
+          >
+            <button
+              id="date-prev"
+              title="Adjust Hijri Date Back"
+              class="px-2 py-0.5 bg-green-200 text-green-800 font-bold rounded-full hover:bg-green-300 transition-colors"
+            >
+              -
+            </button>
+            <div id="namaz-date" class="text-gray-600 leading-tight">
+              Loading date...
+            </div>
+            <button
+              id="date-next"
+              title="Adjust Hijri Date Forward"
+              class="px-2 py-0.5 bg-green-200 text-green-800 font-bold rounded-full hover:bg-green-300 transition-colors"
+            >
+              +
+            </button>
+          </div>
+          </div>
         <div id="namaz-loader" class="flex justify-center items-center h-full">
           <div
             class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600"
@@ -483,6 +502,9 @@
       let playedStatus = {};
       let jamaatPlayedStatus = {};
       let allEvents = [];
+      // START: JS Update for date adjustment
+      let dateAdjustment = 0;
+      // END: JS Update
 
       document.addEventListener("DOMContentLoaded", () => {
         const mobileMenuButton = document.getElementById("mobile-menu-button");
@@ -501,6 +523,16 @@
         });
 
         document.getElementById("year").textContent = new Date().getFullYear();
+        
+        // START: JS Update for date adjustment
+        // Load saved adjustment from browser's local storage
+        dateAdjustment = parseInt(localStorage.getItem('hijriDateAdjustment')) || 0;
+        
+        // Add event listeners for the new buttons
+        document.getElementById('date-prev').addEventListener('click', () => updateDateAdjustment(-1));
+        document.getElementById('date-next').addEventListener('click', () => updateDateAdjustment(1));
+        // END: JS Update
+
         fetchNamazTimings();
 
         const audioBanner = document.getElementById("audio-permission-banner");
@@ -534,6 +566,15 @@
           audioBanner.style.display = "none";
         });
       });
+
+      // START: JS Update for date adjustment
+      // Function to handle date changes, save them, and refresh the data
+      function updateDateAdjustment(change) {
+        dateAdjustment += change;
+        localStorage.setItem('hijriDateAdjustment', dateAdjustment);
+        fetchNamazTimings();
+      }
+      // END: JS Update
 
       function addMinutes(timeStr, minsToAdd) {
         const [hours, minutes] = timeStr.split(":").map(Number);
@@ -738,21 +779,43 @@
         loader.style.display = "flex";
         errorEl.classList.add("hidden");
         cardEl.classList.add("hidden");
+        dateEl.textContent = 'Loading...';
+
 
         try {
-          const response = await fetch(
+          // API Call 1: Get prayer times for today's date
+          const timingsResponse = await fetch(
             "https://api.aladhan.com/v1/timingsByCity?city=Karachi&country=Pakistan&method=1&school=1"
           );
-          if (!response.ok)
-            throw new Error(`Network error: ${response.statusText}`);
-
-          const data = await response.json();
-          const timings = data.data;
-
+          if (!timingsResponse.ok) throw new Error(`Network error: ${timingsResponse.statusText}`);
+          const timingsData = await timingsResponse.json();
+          const timings = timingsData.data;
           prayerTimesData = timings.timings;
+          
+          // START: JS Update for adjustable date
+          // API Call 2: Get Hijri date based on adjustment
+          const today = new Date();
+          today.setDate(today.getDate() + dateAdjustment);
+          const day = String(today.getDate()).padStart(2, '0');
+          const month = String(today.getMonth() + 1).padStart(2, '0');
+          const year = today.getFullYear();
+          const adjustedDateString = `${day}-${month}-${year}`;
+
+          const hijriResponse = await fetch(`https://api.aladhan.com/v1/gToH?date=${adjustedDateString}`);
+          if (!hijriResponse.ok) throw new Error(`Hijri date fetch failed.`);
+          
+          const hijriData = await hijriResponse.json();
+          const hijriDate = hijriData.data.hijri;
+          const gregorianDate = hijriData.data.gregorian;
+
+          const formattedHijriDate = `${hijriDate.day} ${hijriDate.month.en} ${hijriDate.year} AH`;
+          const formattedGregorianDate = `${gregorianDate.weekday.en}, ${gregorianDate.day} ${gregorianDate.month.en} ${gregorianDate.year}`;
+          
+          dateEl.innerHTML = `<span class="text-xl font-bold text-green-800">${formattedHijriDate}</span><br><span class="text-sm text-gray-500">${formattedGregorianDate}</span>`;
+          // END: JS Update
 
           // Fixed Jamaat Times
-          jamaatTimesData.Fajr = "5:40";
+          jamaatTimesData.Fajr = "5:35";
           jamaatTimesData.Dhuhr = "13:30";
           jamaatTimesData.Asr = "17:30";
           jamaatTimesData.Maghrib = addMinutes(timings.timings.Maghrib, 5);
@@ -767,43 +830,16 @@
           );
 
           const isFriday = new Date(timings.date.readable).getDay() === 5;
-
-          // UPDATED CODE BLOCK STARTS HERE
-          const hijriDate = timings.date.hijri;
-          const gregorianDate = timings.date.gregorian;
-          const formattedHijriDate = `${hijriDate.day} ${hijriDate.month.en} ${hijriDate.year} AH`;
-          const formattedGregorianDate = `${gregorianDate.weekday.en}, ${timings.date.readable}`;
-
-          dateEl.innerHTML = `<span class="text-xl font-bold text-green-800">${formattedHijriDate}</span><br><span class="text-sm text-gray-500">${formattedGregorianDate}</span>`;
-          // UPDATED CODE BLOCK ENDS HERE
-
+          
           container.innerHTML = "";
 
           const prayerDisplayOrder = [
-            {
-              name: "Fajr",
-              time: timings.timings.Fajr,
-            },
-            {
-              name: "Sunrise",
-              time: timings.timings.Sunrise,
-            },
-            {
-              name: "Dhuhr",
-              time: timings.timings.Dhuhr,
-            },
-            {
-              name: "Asr",
-              time: timings.timings.Asr,
-            },
-            {
-              name: "Maghrib",
-              time: timings.timings.Maghrib,
-            },
-            {
-              name: "Isha",
-              time: timings.timings.Isha,
-            },
+            { name: "Fajr", time: timings.timings.Fajr, },
+            { name: "Sunrise", time: timings.timings.Sunrise, },
+            { name: "Dhuhr", time: timings.timings.Dhuhr, },
+            { name: "Asr", time: timings.timings.Asr, },
+            { name: "Maghrib", time: timings.timings.Maghrib, },
+            { name: "Isha", time: timings.timings.Isha, },
           ];
 
           prayerDisplayOrder.forEach((prayer, index) => {
@@ -815,8 +851,7 @@
             const row = document.createElement("div");
             row.id = `prayer-row-${prayer.name}`;
 
-            let rowClasses =
-              "flex justify-between items-center p-4 rounded-lg transition-colors duration-300";
+            let rowClasses = "flex justify-between items-center p-4 rounded-lg transition-colors duration-300";
             if (isJummahPrayer) {
               rowClasses += " bg-green-100 border-l-4 border-green-500";
             } else {
@@ -856,8 +891,5 @@
     </script>
   </body>
 </html>
-
-
-
 
 
